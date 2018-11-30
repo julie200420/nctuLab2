@@ -24,7 +24,7 @@ class SingleSwitchTopo(Topo):
                 switch, 
                 bw = 10, 
                 delay = '5ms', 
-                loss = 0)
+                loss = 10)
 
 '''
 Create and test a simple network
