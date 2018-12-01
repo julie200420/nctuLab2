@@ -16,11 +16,12 @@ In this lab, we are going to write a Python program which can generate a network
 ---
 ## Execution
 
-> TODO: 
-> * Describe how to execute your program
-> * Show the screenshot of using iPerf command in Mininet
+After finishing the topology.py, type 
 
-After finishing the topology.py, type "./topologt.py" in command line and then you will enter in the Mininet's CLI mode.
+$ ./topologt.py
+
+then you will enter in the Mininet's CLI mode.
+
 Use the following iPerf commands to measure the topology.
 
 ![alt text](screenshot2.PNG)
@@ -60,19 +61,19 @@ There are three parts in my code: the class "MyTopo", the function "simpleTest",
 
 1. h2 iperf -s -u -i 1 > ./out/result &
 
-  -s : run iPerf in server mode
+  > -s : run iPerf in server mode
   
-  -u : Use UDP rather than TCP 
+  > -u : Use UDP rather than TCP 
   
-  -i 1 : a report is made every 1 second of the bandwidth since the last report
+  > -i 1 : a report is made every 1 second of the bandwidth since the last report
   
   > /out/result & : write the report in file result
   
 2. h2 iperf -c 10.0.0.4 -u –i 1
 
-  -c : run iPerf in client mode
+  > -c : run iPerf in client mode
   
-  10.0.0.4 : set the IP address h2 wants to connect
+  > 10.0.0.4 : set the IP address h2 wants to connect
   
 ### Tasks
 
@@ -119,11 +120,32 @@ There are three parts in my code: the class "MyTopo", the function "simpleTest",
 
    (1.) the remainder is 1, so I should generate topo1.png
    
-   ![alt text](/Network_Topology/src/topo/topo1.PNG)
+   ![alt text](/src/topo/topo1.png)
    
-   (2.) Write a Python program named topology.py and put it at the same place with example.py
+   (2.) Write a Python program named topology.py (refer to example.py) and put it at the same place with example.py
+   
+   (3.) check the connection by using following command in the Mininet's CLI mode
+   
+   > mininet> pingall
+   
+   > mininet> h1 ping h2
+   
+   > mininet> links
+   
+   > mininet> dump
 
 4. **Measurement**
+
+   (1.) Use the following iPerf commands to measure the topology you built. And they will dump the result of iPerf’s
+measurement into the file result
+
+        * /Network_Topology/src/out/result
+   
+   ![alt text](screenshot2.PNG)
+   
+   (2.) The expected result from the topo1.png
+   
+   ![alt text](screenshot.PNG)
 
 ---
 ## References
