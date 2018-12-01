@@ -6,6 +6,7 @@ from mininet.node import OVSController
 from mininet.link import TCLink
 from mininet.util import dumpNodeConnections
 from mininet.log import setLogLevel
+from mininet.cli import CLI
 
 '''
 Single switch connected to n hosts.
@@ -43,7 +44,8 @@ def simpleTest():
     print("Testing network connectivity")
     net.pingAll()
     # Stop a network
-    net.stop()
+    #net.stop()
+    CLI(net)
 
 '''
 Main (entry point)
