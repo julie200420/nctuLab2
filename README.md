@@ -24,6 +24,7 @@ After finishing the topology.py, type "./topologt.py" in command line and then y
 Use the following iPerf commands to measure the topology.
 
 ![alt text](screenshot2.PNG)
+
 Then you will see the result approximately similar to the following, 
 ![alt text](screenshot.PNG)
 ---
@@ -45,29 +46,82 @@ There are three parts in my code: the class "MyTopo", the function "simpleTest",
    In this function, I call the class "MyTopo" to build the topology. Then Create and manage a network with a OvS controller and use TCLink using " net = Mininet( topo = topo, controller = OVSController, link = TCLink)". TCLink means Traffic Control Link. It is necessary so that we can set bandwidth, delay, and loss in a link.
    
    After, start the network by "net.start()" and check connectivity by "net.pingAll()", and then dump every hosts and switches to see the connections by "dumpNodeConnections(net.hosts)" and "dumpNodeConnections(net.switches)".
+   
    Finally, "CLI(net)" means enter in the Mininet's CLI mode.
    
 3. main function
 
    Tell mininet to print useful information by "setLogLevel('info')" and execute the function "simpleTest()".
+
 ### iPerf Commands
 
 > TODO:
 > * Describe the meaning of iPerf command you used in detail
 
+1. h2 iperf -s -u -i 1 > ./out/result &
+
+  -s : run iPerf in server mode
+  
+  -u : Use UDP rather than TCP 
+  
+  -i 1 : a report is made every 1 second of the bandwidth since the last report
+  
+  > /out/result & : write the report in file result
+  
+2. h2 iperf -c 10.0.0.4 -u –i 1
+
+  -c : run iPerf in client mode
+  
+  10.0.0.4 : set the IP address h2 wants to connect
+  
 ### Tasks
 
 > TODO:
 > * Describe how you finish this work step-by-step in detail
 
 1. **Environment Setup**
-
+   
+   (1.) click https://classroom.github.com/a/K8gaizQG and join this lab
+   
+   (2.) use a toolbox for remote computing( I use MobaXterm) to connect to the container
+        
+        * IP address : 140.113.195.69
+        
+        * Port : 10119
+        
+        * user : root
+        
+        * Password : cn2018 ( after logining, change the passwd)
+    
+   (3.) clone GitHub repository
+    
+        $ git clone https://github.com/nctucn/lab2-julie200420.git Network_Topology
+         
+   (4.) Run Mininet for testing
+   
+        $ [sudo] mn
 
 2. **Example of Mininet**
 
-
+   (1.) change the directory into /src
+        
+        $ cd /Network_Topology/src/
+        
+   (2.) change to the executable mode
+        
+        $ chmod +x example.py
+        
+   (3.) Run example code
+        
+        $ ./example.py
+        
 3. **Topology Generator**
 
+   (1.) the remainder is 1, so I should generate topo1.png
+   
+   ![alt text](/Network_Topology/src/topo/topo1.PNG)
+   
+   (2.) Write a Python program named topology.py and put it at the same place with example.py
 
 4. **Measurement**
 
