@@ -19,7 +19,7 @@ In this lab, we are going to write a Python program which can generate a network
 > TODO: 
 > * Describe how to execute your program
 > * Show the screenshot of using iPerf command in Mininet
-
+> ![alt text](screenshot.PNG)
 ---
 ## Description
 
