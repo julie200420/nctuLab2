@@ -22,6 +22,7 @@ In this lab, we are going to write a Python program which can generate a network
 
 After finishing the topology.py, type "./topologt.py" in command line and then you will enter in the Mininet's CLI mode.
 Use the following iPerf commands to measure the topology.
+
 ![alt text](screenshot2.PNG)
 Then you will see the result approximately similar to the following, 
 ![alt text](screenshot.PNG)
@@ -36,14 +37,18 @@ Then you will see the result approximately similar to the following,
 There are three parts in my code: the class "MyTopo", the function "simpleTest", and main function.
 
 1. MyTopo
+
    The goal of this class is to build swtiches, hosts, and links. I use the in-built function "addSwitch(name)", "addHost(name)", and addLinks(name,name,bw,delay,loss) to control parameters and fulfill the goal.
    
 2. simpleTest()
-   In this function, I call the class "MyTopo" to build the topology. Then Create and manage a network with a OvS controller and use TCLink using " net = Mininet( topo = topo, controller = OVSController, link = TCLink)". TCLink means Traffic Control Link. It is necessary so that we can set bandwidth, delay, and loss in a link. 
+
+   In this function, I call the class "MyTopo" to build the topology. Then Create and manage a network with a OvS controller and use TCLink using " net = Mininet( topo = topo, controller = OVSController, link = TCLink)". TCLink means Traffic Control Link. It is necessary so that we can set bandwidth, delay, and loss in a link.
+   
    After, start the network by "net.start()" and check connectivity by "net.pingAll()", and then dump every hosts and switches to see the connections by "dumpNodeConnections(net.hosts)" and "dumpNodeConnections(net.switches)".
    Finally, "CLI(net)" means enter in the Mininet's CLI mode.
    
 3. main function
+
    Tell mininet to print useful information by "setLogLevel('info')" and execute the function "simpleTest()".
 ### iPerf Commands
 
