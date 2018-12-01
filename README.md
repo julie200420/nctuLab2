@@ -24,11 +24,11 @@ then you will enter in the Mininet's CLI mode.
 
 Use the following iPerf commands to measure the topology.
 
-    ![alt text](screenshot2.PNG)
+   ![alt text](screenshot2.PNG)
 
 Then you will see the result approximately similar to the following, 
 
-    ![alt text](screenshot.PNG)
+   ![alt text](screenshot.PNG)
 
 ---
 ## Description
@@ -113,7 +113,7 @@ There are three parts in my code: the class "MyTopo", the function "simpleTest",
 
    (1.) the remainder is 1, so I should generate topo1.png
    
-        ![alt text](/src/topo/topo1.png)
+      ![alt text](/src/topo/topo1.png)
    
    (2.) Write a Python program named topology.py (refer to example.py) and put it at the same place with example.py
    
@@ -134,11 +134,11 @@ measurement into the file result
 
         * /Network_Topology/src/out/result
    
-        ![alt text](screenshot2.PNG)
+   ![alt text](screenshot2.PNG)
    
    (2.) The expected result from the topo1.png
    
-        ![alt text](screenshot.PNG)
+   ![alt text](screenshot.PNG)
 
 ---
 ## References
