@@ -166,9 +166,6 @@ measurement into the file result
 ---
 ## Contributors
 
-> TODO:
-> * Please replace "YOUR_NAME" and "YOUR_GITHUB_LINK" into yours
-
 * [Chen Liu](https://github.com/julie200420)
 * [David Lu](https://github.com/yungshenglu)
 
