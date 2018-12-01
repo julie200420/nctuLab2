@@ -18,23 +18,22 @@ In this lab, we are going to write a Python program which can generate a network
 
 After finishing the topology.py, type 
 
-$ ./topologt.py
+    $ ./topologt.py
 
 then you will enter in the Mininet's CLI mode.
 
 Use the following iPerf commands to measure the topology.
 
-![alt text](screenshot2.PNG)
+    ![alt text](screenshot2.PNG)
 
 Then you will see the result approximately similar to the following, 
-![alt text](screenshot.PNG)
+
+    ![alt text](screenshot.PNG)
+
 ---
 ## Description
 
 ### Mininet API in Python
-
-> TODO:
-> * Describe the meaning of Mininet API in Python you used in detail
 
 There are three parts in my code: the class "MyTopo", the function "simpleTest", and main function.
 
@@ -56,29 +55,23 @@ There are three parts in my code: the class "MyTopo", the function "simpleTest",
 
 ### iPerf Commands
 
-> TODO:
-> * Describe the meaning of iPerf command you used in detail
-
 1. h2 iperf -s -u -i 1 > ./out/result &
 
-  > -s : run iPerf in server mode
+       * -s : run iPerf in server mode
   
-  > -u : Use UDP rather than TCP 
+       * -u : Use UDP rather than TCP 
   
-  > -i 1 : a report is made every 1 second of the bandwidth since the last report
+       * -i 1 : a report is made every 1 second of the bandwidth since the last report
   
-  > /out/result & : write the report in file result
+       * /out/result & : write the report in file result
   
 2. h2 iperf -c 10.0.0.4 -u –i 1
 
-  > -c : run iPerf in client mode
+       * -c : run iPerf in client mode
   
-  > 10.0.0.4 : set the IP address h2 wants to connect
+       * 10.0.0.4 : set the IP address h2 wants to connect
   
 ### Tasks
-
-> TODO:
-> * Describe how you finish this work step-by-step in detail
 
 1. **Environment Setup**
    
@@ -120,19 +113,19 @@ There are three parts in my code: the class "MyTopo", the function "simpleTest",
 
    (1.) the remainder is 1, so I should generate topo1.png
    
-   ![alt text](/src/topo/topo1.png)
+        ![alt text](/src/topo/topo1.png)
    
    (2.) Write a Python program named topology.py (refer to example.py) and put it at the same place with example.py
    
    (3.) check the connection by using following command in the Mininet's CLI mode
    
-   > mininet> pingall
+        mininet> pingall
    
-   > mininet> h1 ping h2
+        mininet> h1 ping h2
    
-   > mininet> links
+        mininet> links
    
-   > mininet> dump
+        mininet> dump
 
 4. **Measurement**
 
@@ -141,17 +134,14 @@ measurement into the file result
 
         * /Network_Topology/src/out/result
    
-   ![alt text](screenshot2.PNG)
+        ![alt text](screenshot2.PNG)
    
    (2.) The expected result from the topo1.png
    
-   ![alt text](screenshot.PNG)
+        ![alt text](screenshot.PNG)
 
 ---
 ## References
-
-> TODO: 
-> * Please add your references in the following
 
 * **Mininet**
     * [Mininet Walkthrough](http://mininet.org/walkthrough/)
@@ -179,7 +169,7 @@ measurement into the file result
 > TODO:
 > * Please replace "YOUR_NAME" and "YOUR_GITHUB_LINK" into yours
 
-* [YOUR_NAME](YOUR_GITHUB_LINK)
+* [Chen Liu](https://github.com/julie200420)
 * [David Lu](https://github.com/yungshenglu)
 
 ---
